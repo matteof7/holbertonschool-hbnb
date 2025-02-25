@@ -1,12 +1,12 @@
-class config:
+class Config:
     """Base configuration."""
     SECRET_KEY = 'dev'
     DEBUG = False
 
-class developmentConfing(config):
+class DevelopmentConfig(Config):
     """Development configuration."""
     DEBUG = True
 
-class productionConfing(config):
+class ProductionConfig(Config):
     """Production configuration."""
     DEBUG = False
