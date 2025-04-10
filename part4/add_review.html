@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter un avis</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/icon.png">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <img src="images/logo.png" alt="Logo" class="logo">
+            <a href="login.html" class="login-button">Se connecter</a>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="login.html">Connexion</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main class="container">
+        <div class="add-review">
+            <h2>Ajouter un avis pour "Appartement moderne au centre-ville"</h2>
+            
+            <form action="#" method="post" class="form">
+                <div class="form-group">
+                    <label for="rating">Note</label>
+                    <div class="star-rating">
+                        <input type="radio" id="star5" name="rating" value="5" required>
+                        <label for="star5" title="5 étoiles">★</label>
+                        <input type="radio" id="star4" name="rating" value="4">
+                        <label for="star4" title="4 étoiles">★</label>
+                        <input type="radio" id="star3" name="rating" value="3">
+                        <label for="star3" title="3 étoiles">★</label>
+                        <input type="radio" id="star2" name="rating" value="2">
+                        <label for="star2" title="2 étoiles">★</label>
+                        <input type="radio" id="star1" name="rating" value="1">
+                        <label for="star1" title="1 étoile">★</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="title">Titre de l'avis</label>
+                    <input type="text" id="title" name="title" placeholder="Résumez votre expérience en une phrase" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="comment">Commentaire</label>
+                    <textarea id="comment" name="comment" placeholder="Partagez votre expérience en détail..." rows="5" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="stay-date">Date du séjour</label>
+                    <input type="month" id="stay-date" name="stay-date" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="photo">Ajouter des photos (optionnel)</label>
+                    <input type="file" id="photo" name="photo" accept="image/*" multiple>
+                </div>
+                
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">Je confirme que cet avis est basé sur ma propre expérience et représente mon opinion sincère.</label>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" class="cancel-button" onclick="window.history.back()">Annuler</button>
+                    <button type="submit" class="form-button">Soumettre l'avis</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Locations - Tous droits réservés</p>
+        </div>
+    </footer>
+</body>
+</html>
