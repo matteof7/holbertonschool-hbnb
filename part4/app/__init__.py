@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, send_from_directory
 from flask_restx import Api
 from flask_cors import CORS  # Ajoutez cette importation en haut du fichier avec les autres importations
 from app.persistence.repository import SQLAlchemyRepository  # Import the new repository class
@@ -9,11 +9,17 @@ from app.api.v1.places import api as places_ns
 from app.api.v1.reviews import api as reviews_ns
 from app.api.v1.auth import api as auth_ns
 from app.api.v1.protector import api as protected_ns
+import os
 
 
 def create_app(config_class="config.DevelopmentConfig"):
     """Create and configure the Flask application"""
-    app = Flask(__name__)
+    app = Flask(__name__, static_folder='path/to/frontend/files')
+    
+    # Pour servir le fichier index.html à la racine
+    @app.route('/')
+    def index():
+        return send_from_directory(app.static_folder, 'index.html')
     
     # Configuration CORS explicite pour l'authentification
     CORS(app, resources={
