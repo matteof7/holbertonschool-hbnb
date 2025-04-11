@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HBNB - Home</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="icon" href="../images/icon.png">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo-container">
+            <img src="../images/logo.png" alt="HBNB Logo" class="logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html" class="login-button" id="login-link">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Available Places</h1>
+
+        <!-- Price Filter -->
+        <section id="filter" style="text-align: center; margin-bottom: 2rem;">
+            <label for="price-filter"><strong>Max Price:</strong></label>
+            <select id="price-filter" style="padding: 5px 10px; margin: 0 10px;">
+                <option value="all" selected>All</option>
+                <option value="200">$200</option>
+                <option value="150">$150</option>
+                <option value="100">$100</option>
+            </select>
+        </section>
+
+        <!-- Places -->
+        <section class="places-container" id="places-list">
+            <!-- Place 1 -->
+            <article class="place-card">
+                <img src="../images/place1.jpg" alt="Beautiful Beach House">
+                <div class="place-info">
+                    <h2>Beautiful Beach House</h2>
+                    <p class="price">Price per night: $150</p>
+                    <a href="place.html" class="details-button">View Details</a>
+                </div>
+            </article>
+
+            <!-- Place 2 -->
+            <article class="place-card">
+                <img src="../images/place2.jpg" alt="Cozy Cabin">
+                <div class="place-info">
+                    <h2>Cozy Cabin</h2>
+                    <p class="price">Price per night: $100</p>
+                    <a href="place.html" class="details-button">View Details</a>
+                </div>
+            </article>
+
+            <!-- Place 3 -->
+            <article class="place-card">
+                <img src="../images/place3.jpg" alt="Modern Apartment">
+                <div class="place-info">
+                    <h2>Modern Apartment</h2>
+                    <p class="price">Price per night: $200</p>
+                    <a href="place.html" class="details-button">View Details</a>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 HBnB Evolution. All rights reserved.</p>
+    </footer>
+
+    <script src="../scripts/scripts.js"></script>
+</body>
+</html>
